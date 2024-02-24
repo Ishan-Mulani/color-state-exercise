@@ -5,7 +5,7 @@ import ColorContainer from "./ColorContainer";
 function App() {
   return (
     <div className="App">
-      <ColorContainer />
+      <ColorContainer numOfBoxes={24} />
     </div>
   );
 }

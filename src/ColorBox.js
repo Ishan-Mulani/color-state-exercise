@@ -6,7 +6,7 @@ class ColorBox extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      colorName: this.props.colorName,
+      colorName: choice(this.props.boxArr, ""),
     };
     this.handleClick = this.handleClick.bind(this);
   }

@@ -3,12 +3,8 @@ import ColorBox from "./ColorBox";
 import "./ColorContainer.css";
 
 class ColorContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  handleClick(evt) {}
   static defaultProps = {
+    numOfBoxes: 18,
     boxArr: [
       "lightblue",
       "lightcoral",
@@ -26,12 +22,14 @@ class ColorContainer extends Component {
     ],
   };
   render() {
-    const { boxArr } = this.props;
+    const { boxArr, numOfBoxes } = this.props;
     return (
       <div className="ColorContainer">
-        {boxArr.map((bColor) => {
-          return <ColorBox colorName={bColor} boxArr={boxArr} />;
-        })}
+        {Array(numOfBoxes)
+          .fill(true)
+          .map((bColor) => {
+            return <ColorBox boxArr={boxArr} />;
+          })}
       </div>
     );
   }
