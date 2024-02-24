@@ -1,0 +1,6 @@
+.ColorContainer {
+  display: flex;
+  width: 60rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
